@@ -10,6 +10,7 @@ export const meta: MetaFunction = () => ({
   charset: "utf-8",
   title: "Nasir Uddin - Frontend Developer",
   viewport: "width=device-width,initial-scale=1",
+  "google-site-verification": "o385U9_fOvD_p8aWQVset4NM3pp_VK5OkREvswyZXLc",
 });
 
 export default function App() {

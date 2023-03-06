@@ -1,8 +1,7 @@
 /** @format */
 
-import { useLoaderData, Link } from "@remix-run/react";
+import { Link, useLoaderData } from "@remix-run/react";
 import type { FC } from "react";
-import { Heading } from "~/components";
 
 export const Footer: FC = () => {
   const data = useLoaderData();
