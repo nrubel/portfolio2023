@@ -9,7 +9,7 @@ export const loader = () => {
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       <url>
         <loc>https://nasiruddin.dev/</loc>
-        <lastmod>${DateTime.now().toISO()}</lastmod>
+        <lastmod>${DateTime.fromFormat("2023-03-06", "yyyy-LL-dd").toISO()}</lastmod>
         <priority>1.0</priority>
       </url>
     </urlset>
