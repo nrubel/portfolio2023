@@ -1,18 +1,24 @@
 /** @format */
 
-import type { LinksFunction, MetaFunction } from "@remix-run/node";
+import type { LinksFunction, LoaderFunction, MetaFunction } from "@remix-run/node";
 import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
 import stylesheet from "~/tailwind.css";
+import { json } from "@remix-run/node";
 
 export const links: LinksFunction = () => [{ rel: "stylesheet", href: stylesheet }];
 
-export const meta: MetaFunction = () => {
-  const title = `Nasir Uddin - Frontend-focused MERN Developer`,
-    description = `Javascript/Typescript-based React developer. Remix is my favorite frontend framework also love to work with NextJS. MongoDB & PostgreSQL with Prisma ORM fan. I am a front-end-focused full-stack developer. I am skilled in Flutter, React, Firebase, WordPress, MongoDB, PostgreSQL, Remix, NextJS, also many other stacks.`,
-    keywords = `JS, javascript, typescript, TS, js, ts, remix.run, nextjs, remix, wordpress, firebase, flutter, dart, Nasir Uddin, Nasir, Uddin, Mohammad, nasir, postgres, postgresql, mongodb, mongo, db, supabase, frontend, html, css, html5, css3, jquery, prisma, sequelize, typeorm, orm, framework, mysql, indexdb, sqlite, google, remofig, remote config, database, messaging, message, socket, socket.io, chat, github, nrubel, linkedin, kishor001, nasiruddin`,
-    url = `https://nasiruddin.dev`,
-    image = `https://avatars.githubusercontent.com/u/6053535?v=4`;
+export const loader: LoaderFunction = () => {
+  return json({
+    title: `Nasir Uddin - Frontend-focused MERN Developer`,
+    description: `Javascript/Typescript-based React developer. Remix is my favorite frontend framework also love to work with NextJS. MongoDB & PostgreSQL with Prisma ORM fan. I am a front-end-focused full-stack developer. I am skilled in Flutter, React, Firebase, WordPress, MongoDB, PostgreSQL, Remix, NextJS, also many other stacks.`,
+    keywords: `JS, javascript, typescript, TS, js, ts, remix.run, nextjs, remix, wordpress, firebase, flutter, dart, Nasir Uddin, Nasir, Uddin, Mohammad, nasir, postgres, postgresql, mongodb, mongo, db, supabase, frontend, html, css, html5, css3, jquery, prisma, sequelize, typeorm, orm, framework, mysql, indexdb, sqlite, google, remofig, remote config, database, messaging, message, socket, socket.io, chat, github, nrubel, linkedin, kishor001, nasiruddin`,
+    url: `https://nasiruddin.dev`,
+    image: `https://avatars.githubusercontent.com/u/6053535?v=4`,
+  });
+};
 
+export const meta: MetaFunction<typeof loader> = ({ data }) => {
+  const { title, description, keywords, url, image } = data;
   return {
     charset: "utf-8",
     title,
