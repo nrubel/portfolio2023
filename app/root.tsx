@@ -1,9 +1,10 @@
 /** @format */
 
 import type { LinksFunction, LoaderFunction, MetaFunction } from "@remix-run/node";
-import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
-import stylesheet from "~/tailwind.css";
 import { json } from "@remix-run/node";
+import { Outlet } from "@remix-run/react";
+import stylesheet from "~/tailwind.css";
+import { Document } from "./components/Document";
 
 export const links: LinksFunction = () => [{ rel: "stylesheet", href: stylesheet }];
 
@@ -46,17 +47,19 @@ export const meta: MetaFunction<typeof loader> = ({ data }) => {
 
 export default function App() {
   return (
-    <html lang='en'>
-      <head>
-        <Meta />
-        <Links />
-      </head>
-      <body>
-        <Outlet />
-        <ScrollRestoration />
-        <Scripts />
-        <LiveReload />
-      </body>
-    </html>
+    <Document>
+      <Outlet />
+    </Document>
+  );
+}
+
+export function ErrorBoundary({ error }: { error: Error }) {
+  return (
+    <Document>
+      <div className='error-container'>
+        <h1>App Error</h1>
+        <pre>{error.message}</pre>
+      </div>
+    </Document>
   );
 }
