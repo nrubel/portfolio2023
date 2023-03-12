@@ -1,12 +1,12 @@
 /** @format */
 
-import { Link, useRouteLoaderData } from "@remix-run/react";
+import { Link } from "@remix-run/react";
 import type { FC } from "react";
-import type { Nav, RootLoader } from "../models/root";
-import type { Featured } from "../models/root";
+import { basicData } from "../data/basic";
+import type { Featured, Nav } from "../models/root";
 
 const NewHome: FC = () => {
-  const { image, title, skills, featured, socialLinks, navs } = useRouteLoaderData("root") as unknown as RootLoader;
+  const { image, title, skills, featured, socialLinks, navs } = basicData;
 
   return (
     <div className={`container mx-auto max-w-6xl px-4 py-10`}>
