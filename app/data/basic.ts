@@ -8,7 +8,7 @@ export const basicData: RootLoader = {
   keywords: `JS, javascript, typescript, TS, js, ts, remix.run, nextjs, remix, wordpress, firebase, flutter, dart, Nasir Uddin, Nasir, Uddin, Mohammad, nasir, postgres, postgresql, mongodb, mongo, db, supabase, frontend, html, css, html5, css3, jquery, prisma, sequelize, typeorm, orm, framework, mysql, indexdb, sqlite, google, remofig, remote config, database, messaging, message, socket, socket.io, chat, github, nrubel, linkedin, kishor001, nasiruddin`,
   skills: `JavaScript, TypeScript, React, Remix, NextJS, Flutter, Express, NestJS, MongoDB, PostgreSQL, Firebase, REST API, GraphQL, Microservice,  Dart, socket.io, Prisma, TypeORM`,
   url: `https://nasiruddin.dev`,
-  image: `https://avatars.githubusercontent.com/u/6053535?v=4`,
+  image: `/images/nasir-uddin.jpg`,
   navs: [
     { title: "My experiences", to: `/experiences` },
     { title: `My Resume`, href: `/Nasir_Resume.pdf` },
