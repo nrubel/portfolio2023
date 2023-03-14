@@ -13,7 +13,7 @@ export const Document: FC<PropsWithChildren> = ({ children }) => {
         <Meta />
         <Links />
       </head>
-      <body className={`flex min-h-screen mw-100vw`}>
+      <body className={`flex min-h-screen mw-100vw flex-col`}>
         {children}
         <ScrollRestoration />
         {shouldHydrate && <Scripts />}

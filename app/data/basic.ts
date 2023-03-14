@@ -40,9 +40,10 @@ export const basicData: RootLoader = {
     },
   ],
   socialLinks: [
-    { title: `<>gh://nrubel</>`, link: `https://github.com/nrubel` },
-    { title: `<>fb://kishor001</>`, link: `https://fb.me/kishor001` },
-    { title: `<>tw://nrubel</>`, link: `https://twitter.com/nrubel` },
-    { title: `<>ln://nasir-uddin</>`, link: `https://linkedin.com/nasir-uddin` },
+    { title: `Github`, link: `https://github.com/nrubel` },
+    { title: `Facebook`, link: `https://fb.me/kishor001` },
+    { title: `Twitter`, link: `https://twitter.com/nrubel` },
+    { title: `LinkedIn`, link: `https://linkedin.com/nasir-uddin` },
+    { title: `StackOverflow`, link: `https://stackoverflow.com/users/4237038/nasir-uddin` },
   ],
 };
