@@ -69,7 +69,9 @@ const NewHome: FC = () => {
                 <img src={`/images/${feat.key}.webp`} alt={`${feat.title} - Cover`} className={`h-56 w-full object-cover rounded mb-5`} />
                 <h2 className={`text-2xl text-slate-800`}>{feat.title}</h2>
                 <p className={`text-sm my-2`}>{feat.desc}</p>
-                <a href={feat.link}>View</a>
+                <a href={feat.link} className={`border border-1 border-slate-900 rounded py-1 px-5 mt-3 inline-block`}>
+                  View
+                </a>
               </article>
             ))}
           </div>

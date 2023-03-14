@@ -17,13 +17,13 @@ export const basicData: RootLoader = {
     {
       key: `flyhub-hrms`,
       title: `Flyhub HRMS`,
-      desc: `The is a web based admin panel for human resource management system for Flyhub. The system was build with ReactJS+Typescript+ViteJS+Redux for frontend and ExpressJS+MongoDB+Mongoose for Rest API. Both frontend and backend was made by me and its still growing with new features.`,
+      desc: `The is a web based admin panel for human resource management system for Flyhub. The system was build with ReactJS+Typescript+Redux for frontend and ExpressJS+MongoDB+Mongoose for Rest API. Both frontend and backend was made by me and its still growing with new features.`,
       link: `https://app.hrms.flyhub.com`,
     },
     {
       key: `flyhub-faces`,
       title: `Faces of Flyhub`,
-      desc: `Faces of Flyhub is a platform containing some employee profiles. I build its front with ReactJS+Vite and backend with express and MongoDB. Here is a profile of my team member.`,
+      desc: `Faces of Flyhub is a platform containing some employee profiles. I build its front with ReactJS and backend with express and MongoDB. Here is a profile of my team member.`,
       link: `https://faces.flyhub.com/46482d42442d41303435`,
     },
     {
