@@ -2,8 +2,11 @@
 
 import { Links, LiveReload, ScrollRestoration, Scripts, Meta } from "@remix-run/react";
 import type { FC, PropsWithChildren } from "react";
+import { useShouldHydrate } from "remix-utils";
 
 export const Document: FC<PropsWithChildren> = ({ children }) => {
+  let shouldHydrate = useShouldHydrate();
+
   return (
     <html lang='en'>
       <head>
@@ -13,7 +16,7 @@ export const Document: FC<PropsWithChildren> = ({ children }) => {
       <body className={`flex min-h-screen mw-100vw`}>
         {children}
         <ScrollRestoration />
-        <Scripts />
+        {shouldHydrate && <Scripts />}
         <LiveReload />
       </body>
     </html>
