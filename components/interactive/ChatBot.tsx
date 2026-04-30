@@ -112,7 +112,7 @@ export function ChatBot({ isOpen, onClose }: ChatBotProps) {
               >
                 {/* Avatar */}
                 <div
-                  className={`flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full ${
+                  className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full ${
                     msg.role === "assistant"
                       ? "bg-primary/10 border border-primary/20"
                       : "bg-surface-2 border border-border"
@@ -142,7 +142,7 @@ export function ChatBot({ isOpen, onClose }: ChatBotProps) {
 
             {messages.length === 0 && (
               <div className="flex items-end gap-2">
-                <div className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 border border-primary/20">
+                <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10 border border-primary/20">
                   <Bot className="h-3 w-3 text-primary" />
                 </div>
                 <div className="max-w-[78%] rounded-2xl rounded-bl-sm bg-surface-2 px-3.5 py-2.5 text-sm leading-relaxed text-card-foreground/90">
@@ -156,7 +156,7 @@ export function ChatBot({ isOpen, onClose }: ChatBotProps) {
             {/* Typing indicator */}
             {isLoading && (
               <div className="flex items-end gap-2">
-                <div className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 border border-primary/20">
+                <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10 border border-primary/20">
                   <Bot className="h-3 w-3 text-primary" />
                 </div>
                 <div className="bg-surface-2 rounded-2xl rounded-bl-sm px-3.5 py-3">
@@ -211,7 +211,7 @@ export function ChatBot({ isOpen, onClose }: ChatBotProps) {
             <button
               type="submit"
               disabled={isLoading || !input.trim()}
-              className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground transition-all hover:bg-primary/90 disabled:opacity-40 disabled:cursor-not-allowed"
+              className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground transition-all hover:bg-primary/90 disabled:opacity-40 disabled:cursor-not-allowed"
               aria-label="Send message"
             >
               {isLoading ? (

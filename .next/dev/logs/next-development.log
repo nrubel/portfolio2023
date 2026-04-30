@@ -4,3 +4,7 @@
 {"timestamp":"00:03:12.692","source":"Server","level":"ERROR","message":"{}"}
 {"timestamp":"00:03:43.622","source":"Server","level":"LOG","message":"✓ Compiled in 99ms"}
 {"timestamp":"00:04:10.059","source":"Server","level":"LOG","message":"✓ Compiled in 90ms"}
+{"timestamp":"01:03:23.400","source":"Server","level":"LOG","message":"✓ Compiled in 2.1s"}
+{"timestamp":"01:11:11.601","source":"Server","level":"LOG","message":"✓ Compiled in 363ms"}
+{"timestamp":"01:11:28.480","source":"Server","level":"LOG","message":"✓ Compiled in 330ms"}
+{"timestamp":"01:11:36.427","source":"Server","level":"LOG","message":"✓ Compiled in 363ms"}
