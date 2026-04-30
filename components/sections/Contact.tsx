@@ -45,7 +45,7 @@ export function Contact() {
                 href={`mailto:${profile.email}`}
                 className="glass-hover rounded-xl p-5 flex items-center gap-4 group"
               >
-                <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-lg border border-border bg-surface-2 text-primary group-hover:bg-primary/10 group-hover:border-primary/30 transition-all duration-200">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border border-border bg-surface-2 text-primary group-hover:bg-primary/10 group-hover:border-primary/30 transition-all duration-200">
                   <Mail className="h-5 w-5" />
                 </div>
                 <div>
@@ -61,7 +61,7 @@ export function Contact() {
 
               {/* Location */}
               <div className="glass rounded-xl p-5 flex items-center gap-4">
-                <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-lg border border-border bg-surface-2 text-muted-foreground">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border border-border bg-surface-2 text-muted-foreground">
                   <MapPin className="h-5 w-5" />
                 </div>
                 <div>
@@ -114,7 +114,7 @@ export function Contact() {
           <SectionReveal delay={0.1} direction="right">
             <div className="glass rounded-2xl p-8 h-full flex flex-col justify-between min-h-64 relative overflow-hidden">
               {/* Background decoration */}
-              <div className="absolute top-0 right-0 w-48 h-48 bg-primary/[0.04] rounded-full blur-3xl" />
+              <div className="absolute top-0 right-0 w-48 h-48 bg-primary/4 rounded-full blur-3xl" />
 
               <div className="relative z-10">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 border border-primary/20 mb-5">

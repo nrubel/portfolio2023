@@ -72,7 +72,7 @@ export function About() {
                   sizes="(max-width: 768px) 100vw, 288px"
                 />
                 {/* Overlay gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-background/40 via-transparent to-transparent" />
               </div>
               {/* Floating code label */}
               <div className="absolute -bottom-4 -left-4 glass rounded-xl px-3 py-2 text-xs font-mono">

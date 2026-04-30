@@ -292,7 +292,7 @@ export function Terminal({ isOpen, onClose }: TerminalProps) {
             className="fixed inset-x-4 top-[8%] bottom-[8%] z-50 mx-auto max-w-3xl terminal-window flex flex-col"
           >
             {/* Title bar */}
-            <div className="flex items-center gap-2 px-4 py-3 border-b border-white/[0.06] flex-shrink-0">
+            <div className="flex items-center gap-2 px-4 py-3 border-b border-white/6 shrink-0">
               <button
                 onClick={onClose}
                 className="h-3 w-3 rounded-full bg-red-500 hover:bg-red-400 transition-colors"
@@ -330,10 +330,8 @@ export function Terminal({ isOpen, onClose }: TerminalProps) {
             </div>
 
             {/* Input row */}
-            <div className="flex items-center gap-2 px-4 py-3 border-t border-white/[0.06] flex-shrink-0">
-              <span className="terminal-prompt font-terminal flex-shrink-0">
-                $
-              </span>
+            <div className="flex items-center gap-2 px-4 py-3 border-t border-white/6 shrink-0">
+              <span className="terminal-prompt font-terminal shrink-0">$</span>
               <input
                 ref={inputRef}
                 value={input}

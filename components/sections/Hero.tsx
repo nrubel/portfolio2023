@@ -39,9 +39,9 @@ export function Hero() {
     >
       {/* Background glow orbs */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[600px] rounded-full bg-cyan-500/[0.04] blur-[120px]" />
-        <div className="absolute top-1/2 -right-40 w-[500px] h-[500px] rounded-full bg-indigo-500/[0.06] blur-[100px]" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-blue-500/[0.04] blur-[100px]" />
+        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-200 h-150 rounded-full bg-cyan-500/4 blur-[120px]" />
+        <div className="absolute top-1/2 -right-40 w-125 h-125 rounded-full bg-indigo-500/6 blur-[100px]" />
+        <div className="absolute bottom-0 left-0 w-100 h-100 rounded-full bg-blue-500/4 blur-[100px]" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-6xl w-full">
@@ -159,9 +159,9 @@ export function Hero() {
               className="relative"
             >
               {/* Glow ring */}
-              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-500/30 to-indigo-500/30 blur-2xl scale-110" />
+              <div className="absolute inset-0 rounded-full bg-linear-to-tr from-cyan-500/30 to-indigo-500/30 blur-2xl scale-110" />
               {/* Border gradient */}
-              <div className="relative rounded-full p-[2px] bg-gradient-to-tr from-cyan-400/60 via-blue-500/40 to-indigo-500/60 shadow-glow-md">
+              <div className="relative rounded-full p-0.5 bg-linear-to-tr from-cyan-400/60 via-blue-500/40 to-indigo-500/60 shadow-glow-md">
                 <div className="rounded-full overflow-hidden w-52 h-52 sm:w-64 sm:h-64 bg-surface">
                   <Image
                     src={avatar}

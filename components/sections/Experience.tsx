@@ -23,13 +23,13 @@ function ExperienceCard({ exp }: { exp: Experience }) {
     >
       {/* Current indicator glow */}
       {isCurrent && (
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-primary to-transparent" />
       )}
 
       {/* Company header */}
       <div className="flex items-start justify-between gap-4 mb-6">
         <div className="flex items-center gap-4">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-surface-2 border border-border text-lg font-bold text-primary font-mono flex-shrink-0">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-surface-2 border border-border text-lg font-bold text-primary font-mono shrink-0">
             {exp.company[0]}
           </div>
           <div>
@@ -79,7 +79,7 @@ function ExperienceCard({ exp }: { exp: Experience }) {
               <h4 className="text-sm font-semibold text-card-foreground/90">
                 {position.title}
               </h4>
-              <div className="flex items-center gap-2 text-xs text-muted-foreground font-mono flex-shrink-0">
+              <div className="flex items-center gap-2 text-xs text-muted-foreground font-mono shrink-0">
                 <span>
                   {formatDateRange(position.startDate, position.endDate)}
                 </span>
@@ -108,7 +108,7 @@ function ExperienceCard({ exp }: { exp: Experience }) {
                     key={hi}
                     className="flex items-start gap-2 text-xs text-muted-foreground"
                   >
-                    <span className="mt-0.5 h-1.5 w-1.5 rounded-full bg-primary/60 flex-shrink-0" />
+                    <span className="mt-0.5 h-1.5 w-1.5 rounded-full bg-primary/60 shrink-0" />
                     {h}
                   </li>
                 ))}

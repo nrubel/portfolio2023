@@ -113,7 +113,7 @@ function SkillDetail({ category }: { category: SkillCategory }) {
           </div>
           <div className="skill-bar">
             <motion.div
-              className={`skill-bar-fill bg-gradient-to-r ${barColor}`}
+              className={`skill-bar-fill bg-linear-to-r ${barColor}`}
               initial={{ width: 0 }}
               animate={{ width: `${skill.proficiency}%` }}
               transition={{ delay: i * 0.04, duration: 0.8, ease: "easeOut" }}

@@ -51,7 +51,7 @@ function ProjectCard({ project }: { project: Project }) {
           className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-background/60 via-transparent to-transparent" />
         {/* Status badge */}
         <span
           className={`absolute top-3 right-3 rounded-full border px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide ${
