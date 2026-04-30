@@ -1,0 +1,37 @@
+[
+  {
+    "platform": "GitHub",
+    "handle": "nrubel",
+    "url": "https://github.com/nrubel",
+    "icon": "github",
+    "primary": true
+  },
+  {
+    "platform": "LinkedIn",
+    "handle": "nasir-uddin",
+    "url": "https://linkedin.com/in/nasir-uddin",
+    "icon": "linkedin",
+    "primary": true
+  },
+  {
+    "platform": "Twitter",
+    "handle": "@nrubel",
+    "url": "https://twitter.com/nrubel",
+    "icon": "twitter",
+    "primary": false
+  },
+  {
+    "platform": "StackOverflow",
+    "handle": "nasir-uddin",
+    "url": "https://stackoverflow.com/users/4237038/nasir-uddin",
+    "icon": "stackoverflow",
+    "primary": false
+  },
+  {
+    "platform": "Facebook",
+    "handle": "kishor001",
+    "url": "https://fb.me/kishor001",
+    "icon": "facebook",
+    "primary": false
+  }
+]

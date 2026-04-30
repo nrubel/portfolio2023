@@ -1,0 +1,76 @@
+[
+  {
+    "category": "Frontend",
+    "icon": "monitor",
+    "color": "cyan",
+    "skills": [
+      { "name": "React", "proficiency": 95, "years": 5 },
+      { "name": "TypeScript", "proficiency": 92, "years": 5 },
+      { "name": "Next.js", "proficiency": 88, "years": 3 },
+      { "name": "Remix", "proficiency": 85, "years": 2 },
+      { "name": "Redux / Zustand", "proficiency": 88, "years": 4 },
+      { "name": "TailwindCSS", "proficiency": 92, "years": 3 },
+      { "name": "HTML5 / CSS3", "proficiency": 97, "years": 7 },
+      { "name": "Framer Motion", "proficiency": 78, "years": 2 }
+    ]
+  },
+  {
+    "category": "Backend",
+    "icon": "server",
+    "color": "blue",
+    "skills": [
+      { "name": "Node.js", "proficiency": 88, "years": 5 },
+      { "name": "Express.js", "proficiency": 90, "years": 5 },
+      { "name": "NestJS", "proficiency": 75, "years": 2 },
+      { "name": "REST API Design", "proficiency": 90, "years": 5 },
+      { "name": "GraphQL", "proficiency": 72, "years": 2 },
+      { "name": "Socket.io", "proficiency": 80, "years": 3 }
+    ]
+  },
+  {
+    "category": "Database",
+    "icon": "database",
+    "color": "violet",
+    "skills": [
+      { "name": "MongoDB", "proficiency": 90, "years": 5 },
+      { "name": "PostgreSQL", "proficiency": 80, "years": 3 },
+      { "name": "Prisma ORM", "proficiency": 82, "years": 2 },
+      { "name": "TypeORM", "proficiency": 75, "years": 2 },
+      { "name": "Firebase / Firestore", "proficiency": 83, "years": 4 },
+      { "name": "SQLite / IndexedDB", "proficiency": 70, "years": 2 }
+    ]
+  },
+  {
+    "category": "Mobile",
+    "icon": "smartphone",
+    "color": "emerald",
+    "skills": [
+      { "name": "Flutter", "proficiency": 85, "years": 3 },
+      { "name": "Dart", "proficiency": 85, "years": 3 },
+      { "name": "React Native", "proficiency": 70, "years": 1 }
+    ]
+  },
+  {
+    "category": "DevOps & Cloud",
+    "icon": "cloud",
+    "color": "orange",
+    "skills": [
+      { "name": "Vercel", "proficiency": 88, "years": 3 },
+      { "name": "Docker", "proficiency": 72, "years": 2 },
+      { "name": "GitHub Actions", "proficiency": 75, "years": 2 },
+      { "name": "Firebase Hosting", "proficiency": 82, "years": 4 }
+    ]
+  },
+  {
+    "category": "Tools & Practices",
+    "icon": "wrench",
+    "color": "pink",
+    "skills": [
+      { "name": "Git / GitHub", "proficiency": 92, "years": 6 },
+      { "name": "Microservices", "proficiency": 72, "years": 2 },
+      { "name": "WordPress", "proficiency": 80, "years": 4 },
+      { "name": "Supabase", "proficiency": 75, "years": 1 },
+      { "name": "Sequelize", "proficiency": 72, "years": 2 }
+    ]
+  }
+]

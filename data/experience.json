@@ -1,0 +1,39 @@
+[
+  {
+    "id": "flyhub",
+    "company": "Flyhub",
+    "companyUrl": "https://flyhub.com",
+    "logo": "/images/flyhub-logo.webp",
+    "industry": "Travel Technology",
+    "positions": [
+      {
+        "title": "Software Engineer",
+        "startDate": "2020-06",
+        "endDate": null,
+        "isCurrent": true,
+        "isRemote": false,
+        "location": "Dhaka, Bangladesh",
+        "employmentType": "Full-time",
+        "description": "Leading frontend architecture and full-stack development across multiple enterprise products at Flyhub — a B2B travel technology platform serving agents across Bangladesh, UAE, and beyond.\n\nDesigned and built the Flyhub HRMS from the ground up, an internal human resource management system handling employee profiles, leave management, and organizational workflows for a 100+ person company.\n\nEngineered Faces of Flyhub, an employee profile platform that blends internal recognition with public-facing team showcasing.\n\nDeveloped Flyhub Apps Showcase — a marketing platform with a custom CMS backend for showcasing company products.\n\nContributed to Flyhub Agents UAE, a B2B mobile application for travel agents in the United Arab Emirates.",
+        "highlights": [
+          "Architected HRMS platform serving 100+ employees with real-time workflows",
+          "Built cross-platform B2B mobile app deployed to UAE market",
+          "Designed and implemented Express + MongoDB REST API backends",
+          "Established TypeScript coding standards and Redux state management patterns"
+        ],
+        "technologies": [
+          "React",
+          "TypeScript",
+          "Redux",
+          "Node.js",
+          "Express",
+          "MongoDB",
+          "Flutter",
+          "Dart",
+          "REST API",
+          "Firebase"
+        ]
+      }
+    ]
+  }
+]

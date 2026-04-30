@@ -1,0 +1,32 @@
+{
+  "name": "Nasir Uddin",
+  "headline": "Frontend-Focused Full Stack Engineer",
+  "taglines": [
+    "React & TypeScript Engineer",
+    "MERN Stack Architect",
+    "Cross-Platform Mobile Developer",
+    "Open Source Contributor"
+  ],
+  "location": "Dhaka, Bangladesh",
+  "email": "contact@nasiruddin.dev",
+  "phone": "",
+  "website": "https://nasiruddin.dev",
+  "avatar": "/images/nasir-uddin.webp",
+  "resume": "/Nasir_Resume.pdf",
+  "summary": "Frontend-focused Full Stack Engineer with expertise in modern JavaScript and TypeScript ecosystems. I architect and deliver complex web applications that bridge exceptional user experience with robust engineering principles — from real-time enterprise HRMS platforms to cross-platform mobile apps. Currently building scalable systems at Flyhub, where I lead frontend architecture and contribute across the full stack with Node.js, MongoDB, and REST APIs.",
+  "about": "I am a Full Stack Engineer who believes great software is defined by the experience it creates. My primary domain is the frontend — React, TypeScript, and modern frameworks — but I am equally fluent across the entire stack, from REST API design with Express and NestJS to database modeling with MongoDB and PostgreSQL.\n\nI have built production systems across diverse domains: travel tech B2B platforms, HRMS tools, employee engagement apps, and cross-platform mobile applications with Flutter. Every project is an opportunity to raise the bar on performance, accessibility, and engineering discipline.\n\nBeyond code, I care deeply about developer experience, clean architecture, and the kind of systematic thinking that makes systems easy to reason about and modify months after they were built.",
+  "stats": {
+    "yearsOfExperience": 5,
+    "projectsDelivered": 20,
+    "technologiesMastered": 30,
+    "companiesServed": 4
+  },
+  "availability": "open_to_opportunities",
+  "preferredRoles": [
+    "Senior Frontend Engineer",
+    "Full Stack Engineer",
+    "React/TypeScript Engineer"
+  ],
+  "twitter": "@nrubel",
+  "googleSiteVerification": "o385U9_fOvD_p8aWQVset4NM3pp_VK5OkREvswyZXLc"
+}

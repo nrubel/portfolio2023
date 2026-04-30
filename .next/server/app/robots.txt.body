@@ -1,0 +1,12 @@
+User-Agent: Googlebot
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+User-Agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+
+Host: https://nasiruddin.dev
+Sitemap: https://nasiruddin.dev/sitemap.xml

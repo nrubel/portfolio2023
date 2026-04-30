@@ -1,0 +1,451 @@
+@import "tailwindcss";
+
+/* ─── Tailwind Theme Tokens ──────────────────────────────────────────────── */
+
+@theme {
+  /* Colors */
+  --color-background: hsl(230 70% 3%);
+  --color-background-2: hsl(230 60% 5%);
+  --color-surface: hsl(230 45% 7%);
+  --color-surface-2: hsl(230 35% 10%);
+  --color-border: hsl(230 30% 14%);
+  --color-border-bright: hsl(191 80% 40%);
+
+  --color-primary: hsl(191 100% 55%);
+  --color-primary-foreground: hsl(230 70% 4%);
+  --color-primary-dim: hsl(191 70% 35%);
+
+  --color-secondary: hsl(239 84% 67%);
+  --color-secondary-foreground: hsl(0 0% 100%);
+
+  --color-accent: hsl(263 70% 65%);
+  --color-accent-foreground: hsl(0 0% 100%);
+
+  --color-muted: hsl(230 30% 22%);
+  --color-muted-foreground: hsl(215 20% 55%);
+
+  --color-card: hsl(230 45% 7%);
+  --color-card-foreground: hsl(210 40% 92%);
+
+  --color-destructive: hsl(0 72% 51%);
+  --color-success: hsl(158 64% 52%);
+
+  /* Font families */
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), "JetBrains Mono", monospace;
+
+  /* Border radius */
+  --radius-lg: 0.75rem;
+  --radius-md: calc(0.75rem - 2px);
+  --radius-sm: calc(0.75rem - 4px);
+
+  /* Shadows */
+  --shadow-glow: 0 0 20px rgba(34, 211, 238, 0.15);
+  --shadow-glow-md: 0 0 40px rgba(34, 211, 238, 0.2);
+  --shadow-glow-lg: 0 0 80px rgba(34, 211, 238, 0.25);
+  --shadow-glow-blue: 0 0 30px rgba(99, 102, 241, 0.2);
+  --shadow-card:
+    0 4px 24px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(255, 255, 255, 0.04) inset;
+
+  /* Animations */
+  --animate-fade-in: fadeIn 0.5s ease-in-out forwards;
+  --animate-slide-up: slideUp 0.6s ease-out forwards;
+  --animate-glow-pulse: glowPulse 3s ease-in-out infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-scan: scan 8s linear infinite;
+  --animate-border-flow: borderFlow 4s linear infinite;
+  --animate-spin-slow: spin 8s linear infinite;
+  --animate-blink: blink 1s step-end infinite;
+
+  /* Transition timing */
+  --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* ─── Keyframes ──────────────────────────────────────────────────────────── */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes scan {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(200vh);
+  }
+}
+
+@keyframes borderFlow {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* ─── CSS Custom Properties ─────────────────────────────────────────────── */
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* Glow variables */
+    --glow-cyan: rgba(34, 211, 238, 0.12);
+    --glow-blue: rgba(99, 102, 241, 0.15);
+    --glow-violet: rgba(167, 139, 250, 0.12);
+  }
+}
+
+/* ─── Base Reset & Defaults ──────────────────────────────────────────────── */
+
+@layer base {
+  * {
+    border-color: hsl(230 30% 14%);
+  }
+
+  html {
+    @apply scroll-smooth antialiased;
+    scrollbar-color: hsl(var(--surface-2)) hsl(var(--background));
+    scrollbar-width: thin;
+  }
+
+  body {
+    background-color: hsl(230 70% 3%);
+    color: hsl(210 40% 92%);
+    font-family: var(--font-geist-sans), system-ui, sans-serif;
+    background-image:
+      radial-gradient(
+        ellipse 80% 50% at 50% -20%,
+        rgba(34, 211, 238, 0.06) 0%,
+        transparent 60%
+      ),
+      linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    background-size:
+      100% 100%,
+      48px 48px,
+      48px 48px;
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+
+  /* Custom scrollbar for webkit */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--surface-2));
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted));
+  }
+
+  /* Selection */
+  ::selection {
+    background: rgba(34, 211, 238, 0.25);
+    color: hsl(var(--primary));
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-sans tracking-tight;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  code,
+  pre,
+  kbd {
+    @apply font-mono;
+  }
+}
+
+/* ─── Utility Layer ──────────────────────────────────────────────────────── */
+
+@layer utilities {
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-linear-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent;
+  }
+
+  .gradient-text-warm {
+    @apply bg-gradient-to-r from-cyan-400 to-primary bg-clip-text text-transparent;
+  }
+
+  /* Glass card */
+  .glass {
+    background: rgba(255, 255, 255, 0.025);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .glass-hover {
+    background: rgba(255, 255, 255, 0.025);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    @apply transition-all duration-300;
+  }
+
+  .glass-hover:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(34, 211, 238, 0.2);
+    box-shadow: 0 0 30px rgba(34, 211, 238, 0.08);
+  }
+
+  /* Glow border */
+  .glow-border {
+    position: relative;
+  }
+
+  .glow-border::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(
+      135deg,
+      rgba(34, 211, 238, 0.4),
+      rgba(99, 102, 241, 0.4),
+      transparent
+    );
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  /* Section spacing */
+  .section-padding {
+    @apply py-24 px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Dot decoration */
+  .dot-grid {
+    background-image: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.08) 1px,
+      transparent 1px
+    );
+    background-size: 24px 24px;
+  }
+
+  /* Scanline overlay */
+  .scanline::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.03) 2px,
+      rgba(0, 0, 0, 0.03) 4px
+    );
+    pointer-events: none;
+  }
+
+  /* Text glow */
+  .text-glow {
+    text-shadow: 0 0 20px rgba(34, 211, 238, 0.4);
+  }
+
+  /* Terminal font */
+  .font-terminal {
+    @apply font-mono text-sm tracking-wider;
+  }
+
+  /* Hide scrollbar utility */
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* ─── Component Layer ────────────────────────────────────────────────────── */
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-all duration-200 hover:bg-primary/90 hover:shadow-glow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 rounded-lg border border-border px-6 py-3 text-sm font-semibold transition-all duration-200 hover:border-primary/50 hover:text-primary hover:bg-primary/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+  }
+
+  .section-heading {
+    @apply text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-3;
+  }
+
+  .section-title {
+    @apply text-3xl sm:text-4xl font-bold tracking-tight text-card-foreground;
+  }
+
+  .section-subtitle {
+    @apply text-muted-foreground mt-4 max-w-2xl text-base leading-relaxed;
+  }
+
+  /* Timeline connector */
+  .timeline-line {
+    @apply absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-border to-transparent;
+  }
+
+  /* Tag pill */
+  .tech-tag {
+    @apply inline-flex items-center rounded-full border border-border bg-surface px-2.5 py-0.5 text-xs font-medium text-muted-foreground transition-colors hover:border-primary/40 hover:text-primary;
+  }
+
+  /* Skill bar */
+  .skill-bar {
+    @apply h-1 rounded-full bg-surface-2 overflow-hidden;
+  }
+
+  .skill-bar-fill {
+    @apply h-full rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 transition-all duration-1000 ease-out;
+  }
+}
+
+/* ─── Terminal styles ────────────────────────────────────────────────────── */
+
+.terminal-window {
+  background: #0d1117;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0.75rem;
+  font-family: var(--font-geist-mono), "JetBrains Mono", monospace;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+}
+
+.terminal-prompt {
+  color: #22d3ee;
+}
+
+.terminal-output {
+  color: #94a3b8;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.terminal-output .highlight {
+  color: #22d3ee;
+}
+
+.terminal-output .success {
+  color: #34d399;
+}
+
+.terminal-output .warning {
+  color: #fbbf24;
+}
+
+.terminal-output .error {
+  color: #f87171;
+}
+
+.terminal-output .dim {
+  color: #475569;
+}
+
+/* ─── Animations ─────────────────────────────────────────────────────────── */
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(34, 211, 238, 0.08) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2.5s linear infinite;
+}
+
+/* Cursor blink for terminal */
+.cursor-blink {
+  display: inline-block;
+  width: 8px;
+  height: 16px;
+  background: #22d3ee;
+  animation: blink 1s step-end infinite;
+  vertical-align: text-bottom;
+  margin-left: 2px;
+}

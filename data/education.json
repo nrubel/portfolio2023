@@ -1,0 +1,14 @@
+[
+  {
+    "id": "edu-1",
+    "institution": "Your University",
+    "degree": "Bachelor of Science",
+    "fieldOfStudy": "Computer Science & Engineering",
+    "startDate": "2016-01",
+    "endDate": "2020-12",
+    "grade": "",
+    "logo": "",
+    "description": "TODO: Fill from LinkedIn archive export (Education.csv)",
+    "activities": []
+  }
+]
