@@ -229,7 +229,7 @@
   }
 
   .gradient-text-warm {
-    @apply bg-gradient-to-r from-cyan-400 to-primary bg-clip-text text-transparent;
+    @apply bg-linear-to-r from-cyan-400 to-primary bg-clip-text text-transparent;
   }
 
   /* Glass card */
@@ -358,7 +358,7 @@
 
   /* Timeline connector */
   .timeline-line {
-    @apply absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-border to-transparent;
+    @apply absolute left-6 top-0 bottom-0 w-px bg-linear-to-b from-transparent via-border to-transparent;
   }
 
   /* Tag pill */
@@ -372,7 +372,7 @@
   }
 
   .skill-bar-fill {
-    @apply h-full rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 transition-all duration-1000 ease-out;
+    @apply h-full rounded-full bg-linear-to-r from-cyan-500 to-blue-500 transition-all duration-1000 ease-out;
   }
 }
 

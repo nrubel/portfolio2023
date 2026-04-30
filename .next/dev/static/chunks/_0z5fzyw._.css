@@ -704,15 +704,24 @@
     top: calc(var(--spacing) * 0);
     bottom: calc(var(--spacing) * 0);
     left: calc(var(--spacing) * 6);
-    --tw-gradient-position: to bottom in oklab;
+    --tw-gradient-position: to bottom;
+    width: 1px;
+    position: absolute;
+  }
+
+  @supports (background-image: linear-gradient(in lab, red, red)) {
+    .timeline-line {
+      --tw-gradient-position: to bottom in oklab;
+    }
+  }
+
+  .timeline-line {
     background-image: linear-gradient(var(--tw-gradient-stops));
     --tw-gradient-from: transparent;
     --tw-gradient-via: var(--color-border);
     --tw-gradient-via-stops: var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
     --tw-gradient-to: transparent;
-    width: 1px;
-    position: absolute;
   }
 
   .tech-tag {
@@ -761,12 +770,22 @@
   }
 
   .skill-bar-fill {
-    --tw-gradient-position: to right in oklab;
+    --tw-gradient-position: to right;
+    border-radius: 3.40282e38px;
+    height: 100%;
+  }
+
+  @supports (background-image: linear-gradient(in lab, red, red)) {
+    .skill-bar-fill {
+      --tw-gradient-position: to right in oklab;
+    }
+  }
+
+  .skill-bar-fill {
     background-image: linear-gradient(var(--tw-gradient-stops));
     --tw-gradient-from: var(--color-cyan-500);
     --tw-gradient-to: var(--color-blue-500);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-    height: 100%;
     transition-property: all;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
@@ -774,7 +793,6 @@
     --tw-ease: var(--ease-out);
     transition-duration: 1s;
     transition-timing-function: var(--ease-out);
-    border-radius: 3.40282e38px;
   }
 }
 
@@ -3065,7 +3083,16 @@
   }
 
   .gradient-text-warm {
-    --tw-gradient-position: to right in oklab;
+    --tw-gradient-position: to right;
+  }
+
+  @supports (background-image: linear-gradient(in lab, red, red)) {
+    .gradient-text-warm {
+      --tw-gradient-position: to right in oklab;
+    }
+  }
+
+  .gradient-text-warm {
     background-image: linear-gradient(var(--tw-gradient-stops));
     --tw-gradient-from: var(--color-cyan-400);
     --tw-gradient-to: var(--color-primary);
